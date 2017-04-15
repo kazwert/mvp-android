@@ -86,12 +86,14 @@ public class MainActivity extends BaseActivity implements IMainView {
 
     @Override
     protected void initAction() {
+
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AboutActivity.start(MainActivity.this);
             }
         });
+
         lvInbox.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

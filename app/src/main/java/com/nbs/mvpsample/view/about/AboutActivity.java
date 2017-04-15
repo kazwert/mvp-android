@@ -49,7 +49,6 @@ public class AboutActivity extends BaseActivity implements IAboutView {
     @Override
     protected void initUI() {
         setupToolbar("About Us",false);
-
     }
 
     @Override
@@ -67,5 +66,15 @@ public class AboutActivity extends BaseActivity implements IAboutView {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public void setEmailAddress(String email) {
+        tvAboutPhone.setText(email);
+    }
+
+    @Override
+    public void setAboutDescription(String description) {
+        tvAboutDescription.setText(description);
     }
 }

@@ -7,5 +7,9 @@ import com.nbs.mvpsample.base.IBaseView;
  */
 
 public interface IAboutView extends IBaseView {
+    void setEmailAddress(String email);
+
+    void setAboutDescription(String description);
+
 
 }

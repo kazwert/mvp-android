@@ -5,4 +5,5 @@ package com.nbs.mvpsample.view.about;
  */
 
 public interface IAboutPresenter <V extends IAboutView> {
+
 }

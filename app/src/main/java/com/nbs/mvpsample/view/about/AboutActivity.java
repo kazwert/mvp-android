@@ -48,6 +48,7 @@ public class AboutActivity extends BaseActivity implements IAboutView {
 
     @Override
     protected void initUI() {
+        setupToolbar("About Us",false);
 
     }
 

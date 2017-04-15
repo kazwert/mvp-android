@@ -28,6 +28,7 @@ public class ApiManager implements IApiManager {
         void onFailure(String errorMessage);
     }
 
+
     @Override
     public void loadEmails(final LoadEmailListener listener) {
         Call<ArrayList<Email>> loadEmail =  mApiClient.loadEmails();
@@ -48,5 +49,10 @@ public class ApiManager implements IApiManager {
                 listener.onFailure("404: not found");
             }
         });
+    }
+
+    @Override
+    public void loadMovies(LoadEmailListener listener) {
+        Call<ArrayList<Email>> loadMovie = mApiClient.loadMovies();
     }
 }

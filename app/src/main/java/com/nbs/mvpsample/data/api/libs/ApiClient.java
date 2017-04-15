@@ -16,4 +16,8 @@ public interface ApiClient {
 
     @GET("inbox.json")
     Call<ArrayList<Email>> loadEmails();
+
+    @GET("inbox.json")
+    Call<ArrayList<Email>> loadMovies();
+
 }

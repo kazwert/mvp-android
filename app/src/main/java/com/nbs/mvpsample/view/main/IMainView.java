@@ -15,4 +15,5 @@ public interface IMainView extends IBaseView {
 
     void populateData(ArrayList<Email> emails);
 
+
 }

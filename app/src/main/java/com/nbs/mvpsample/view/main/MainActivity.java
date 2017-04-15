@@ -82,6 +82,8 @@ public class MainActivity extends BaseActivity implements IMainView {
         lvInbox.setAdapter(emailAdapter);
         mainPresenter.onViewready();
         mainPresenter.loadEmailData();
+
+
     }
 
     @Override

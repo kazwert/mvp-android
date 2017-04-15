@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nbs.mvpsample.view.about.AboutActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="About Us"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bg_circle"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_about_description"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Saya benama lengkap Dinan Gaston Castagnos, pernah bersama jupe. Main Bola sambil ngoding , bikin CI dan laravel mah biasa"
+            android:padding="15dp"
+            android:textSize="16sp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv_about_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08223232313"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_about_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Blabalblabla"
+                android:drawableLeft="@drawable/ic_facebook"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

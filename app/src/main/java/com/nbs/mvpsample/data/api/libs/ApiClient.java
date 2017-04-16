@@ -20,4 +20,6 @@ public interface ApiClient {
     @GET("inbox.json")
     Call<ArrayList<Email>> loadMovies();
 
+    @GET("inbox.json")
+    Call<ArrayList<Email>> loadPhones();
 }

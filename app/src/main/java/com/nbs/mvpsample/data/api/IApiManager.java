@@ -7,5 +7,7 @@ package com.nbs.mvpsample.data.api;
 public interface IApiManager {
     void loadEmails(ApiManager.LoadEmailListener listener);
 
-    void loadMovies(ApiManager.LoadEmailListener listener);
+    void loadMovies(ApiManager.LoadMoviesListener listener);
+
+    void loadPhone(ApiManager.LoadEmailListener listener);
 }

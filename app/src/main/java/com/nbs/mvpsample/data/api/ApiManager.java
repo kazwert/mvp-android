@@ -28,6 +28,11 @@ public class ApiManager implements IApiManager {
         void onFailure(String errorMessage);
     }
 
+    public interface LoadMoviesListener{
+        void onSuccess(ArrayList<Email> movies);
+        void onFailure(String errorMessage);
+    }
+
 
     @Override
     public void loadEmails(final LoadEmailListener listener) {
@@ -52,7 +57,29 @@ public class ApiManager implements IApiManager {
     }
 
     @Override
-    public void loadMovies(LoadEmailListener listener) {
+    public void loadMovies(final LoadMoviesListener listener) {
         Call<ArrayList<Email>> loadMovie = mApiClient.loadMovies();
+
+        loadMovie.enqueue(new Callback<ArrayList<Email>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Email>> call, Response<ArrayList<Email>> response) {
+                if(response.isSuccessful() && response.body() != null && response.code() == 200){
+                    listener.onSuccess(response.body());
+                }else {
+                    listener.onFailure("400 : Bad Request");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Email>> call, Throwable t) {
+                listener.onFailure("404 : not found");
+            }
+        });
+    }
+
+
+    @Override
+    public void loadPhone(LoadEmailListener listener) {
+        Call<ArrayList<Email>> loadPhone = mApiClient.loadPhones();
     }
 }

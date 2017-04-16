@@ -40,6 +40,16 @@ public class DataManager implements IDataManager {
         mApiManager.loadEmails(listener);
     }
 
+    @Override
+    public void loadMovies(ApiManager.LoadMoviesListener listener) {
+        mApiManager.loadMovies(listener);
+    }
+
+    @Override
+    public void loadPhone(ApiManager.LoadEmailListener listener) {
+        mApiManager.loadPhone(listener);
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////
     // END OF API IMPLEMENTATION
